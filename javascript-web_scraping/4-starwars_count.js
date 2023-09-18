@@ -13,8 +13,6 @@ request.get(apiUrl, (error, response, body) => {
         return film.characters.includes('https://swapi-api.hbtn.io/api/people/18/');
       });
       console.log(wedgeAntillesFilms.length);
-    } else {
-      console.log('Unable to retrieve movie data.');
     }
   }
 });
