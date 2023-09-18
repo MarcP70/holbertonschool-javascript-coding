@@ -10,7 +10,7 @@ request.get(apiUrl, (error, response, body) => {
     if (response.statusCode === 200) {
       const filmsData = JSON.parse(body);
       const wedgeAntillesFilms = filmsData.results.filter(film => {
-        return film.characters.includes('https://swapi-api.hbtn.io/api/people/18/');
+        return film.characters.some(characterUrl => characterUrl.includes('/18/'));
       });
       console.log(wedgeAntillesFilms.length);
     }
